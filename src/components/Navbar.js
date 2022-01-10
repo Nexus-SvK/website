@@ -1,11 +1,9 @@
 import React from "react";
 
-export default function Navbar(){
+export default function Navbar(props){
     return(
         <div>
-            <ul>
-                <Links/>
-            </ul>
+            {props.data.map(data => <a href={props.data}>{props.data}</a>)}
         </div>
-    )
+    );
 }

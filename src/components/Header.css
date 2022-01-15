@@ -1,29 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
 .intro {
   position: relative;
   margin: 0;
   padding: 0;
-  top: 25%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 h1 {
-  font-family: Hacked;
-  color: rgba(192, 192, 192, 2);
   font-size: 75px;
-  letter-spacing: 70px;
+  letter-spacing: 10px;
 }
 h1,
 p {
   margin: 5px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(192, 192, 192);
 }
 .header {
   height: 350px;
-  border-bottom: black 2px solid;
-  background-image: url("V6.png");
+  margin: 0px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   background-color: #001429;
 }
-@font-face {
-  font-family: Hacked;
-  src: url(https://hackedfont.com/HACKED.ttf);
+#tsparticles {
+  position: relative;
 }

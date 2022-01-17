@@ -1,3 +1,16 @@
 .App {
   text-align: center;
 }
+h1 {
+  font-size: 75px;
+  letter-spacing: 10px;
+}
+h3{
+  letter-spacing: 3px;
+}
+h1,h3,
+p {
+  margin: 5px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(192, 192, 192);
+}

@@ -7,16 +7,6 @@
   top: 50%;
   transform: translateY(-50%);
 }
-h1 {
-  font-size: 75px;
-  letter-spacing: 10px;
-}
-h1,
-p {
-  margin: 5px;
-  font-family: "Montserrat", sans-serif;
-  color: rgb(192, 192, 192);
-}
 .header {
   height: 350px;
   margin: 0px;

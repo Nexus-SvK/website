@@ -5,15 +5,15 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 export default function Main() {
   return (
     <div className="section">
-      <div className="portfolio">
+      <div id="skills" className="portfolio">
         <h2>Portfolio</h2>
         <div className="portfolio-grid"></div>
       </div>
-      <div className="skills">
+      <div id="skills" className="skills">
         <h2>Skills</h2>
         <div className="skills-list"></div>
       </div>
-      <div className="contact">
+      <div id="contact" className="contact">
         <h2>Contact</h2>
         <div className="contact-text">
           <p>

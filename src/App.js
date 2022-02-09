@@ -3,9 +3,14 @@ import Header from "./components/Header";
 import Particles from "react-tsparticles";
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
-import { fas } from '@fortawesome/free-solid-svg-icons';
+import Link from "react-scroll";
 
-const data = ["Home", "Portfolio", "Skills", "Contact"];
+const data = [
+  { label: "Home", id: "#intro" },
+  { label: "Portfolio", id: "#portfolio" },
+  { label: "Skills", id: "#skills" },
+  { label: "Contact", id: "#contact" },
+];
 
 function App() {
   const particlesInit = (main) => {

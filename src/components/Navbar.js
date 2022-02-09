@@ -1,11 +1,18 @@
 import React, { useEffect } from "react";
 import "./Navbar.css";
+import { Link } from "react-scroll";
 
 export default function Navbar(props) {
   const Links = props.data.map((data) => (
-    <a id={data.id} className="links" key={data}>
+    <Link
+      to={data.id}
+      className="links"
+      key={data}
+      smooth={true}
+      duration={1000}
+    >
       {data.label}
-    </a>
+    </Link>
   ));
   return <div className="navigation">{Links}</div>;
 }

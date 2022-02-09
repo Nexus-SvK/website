@@ -2,9 +2,9 @@ import React from "react";
 import "./Main.css";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 
-export default function Main() {
+export default function Main(props) {
   return (
-    <div className="section">
+    <div id={props.id} className="section">
       <div id="skills" className="portfolio">
         <h2>Portfolio</h2>
         <div className="portfolio-grid"></div>

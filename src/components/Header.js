@@ -2,9 +2,9 @@ import React from "react";
 import { useRef } from "react/cjs/react.production.min";
 import "./Header.css";
 
-export default function Header() {
+export default function Header(props) {
   return (
-    <div id="#intro" className="header">
+    <div id={props.id} className="header">
       <div className="intro">
         <h1>Nexus</h1>
         <p>Hi! I'm Matej a Newbie web developer.</p>

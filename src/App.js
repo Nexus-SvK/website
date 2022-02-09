@@ -4,12 +4,13 @@ import Particles from "react-tsparticles";
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
 import Link from "react-scroll";
+import { useRef } from "react/cjs/react.production.min";
 
 const data = [
-  { label: "Home", id: "#intro" },
-  { label: "Portfolio", id: "#portfolio" },
-  { label: "Skills", id: "#skills" },
-  { label: "Contact", id: "#contact" },
+  { label: "Home", id: "intro" },
+  { label: "Portfolio", id: "portfolio" },
+  { label: "Skills", id: "skills" },
+  { label: "Contact", id: "contact" },
 ];
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
   const particlesLoaded = (container) => {
     console.log(container);
   };
+
   return (
     <div className="App">
       <Particles
@@ -135,8 +137,8 @@ function App() {
           detectRetina: true,
         }}
       />
-      <Header />
-      <Main />
+      <Header id={data[0].id} />
+      <Main id={data[1].id} />
       <Navbar data={data} />
     </div>
   );

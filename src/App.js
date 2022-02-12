@@ -7,7 +7,7 @@ import Link from "react-scroll";
 import { useRef } from "react/cjs/react.production.min";
 
 const data = [
-  { label: "Home", id: "intro" },
+  { label: "Home", id: "header" },
   { label: "Portfolio", id: "portfolio" },
   { label: "Skills", id: "skills" },
   { label: "Contact", id: "contact" },
@@ -138,7 +138,7 @@ function App() {
         }}
       />
       <Header id={data[0].id} />
-      <Main id={data[1].id} />
+      <Main id={data} />
       <Navbar data={data} />
     </div>
   );

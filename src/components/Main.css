@@ -3,7 +3,7 @@
     padding-top: 15px;
     background-color: #0C2D48;
     width:100%;
-    height: 1200px;
+    height: min-content;
 }
 
 .portfolio{

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Main.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faGithub} from "@fortawesome/free-brands-svg-icons";
+import {faGithub,faLinkedin} from "@fortawesome/free-brands-svg-icons";
 import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import "@fortawesome/fontawesome-svg-core";
 
@@ -37,21 +37,15 @@ export default function Main(props) {
         <h2>Contact</h2>
         <div className="contact-text">
           <p>
-            Feel free to contact me at <FontAwesomeIcon icon={faEnvelope} />
-            <strong>
-              <a href="mailto:mtjkapral@protonmail.com">mtjkapral@protonmail.com</a>
-            </strong>
+            Feel free to contact me at <a href="mailto:mtjkapral@protonmail.com"><FontAwesomeIcon icon={faEnvelope} />mtjkapral@protonmail.com</a>
             .
           </p>
           <p>
             For viewing my source code from my portfolio projects you can also
-            checkout my GitHub <FontAwesomeIcon icon={faGithub} />
-            <strong>
-              <a href="https://github.com/Nexus-SvK">@Nexus-SvK</a>
-            </strong>
+            checkout my GitHub <a href="https://github.com/Nexus-SvK"><FontAwesomeIcon icon={faGithub} />@Nexus-SvK</a>
             .
           </p>
-          <p>You can also find me on social networks:</p>
+          <p>You can also find me on <a href="https://www.linkedin.com/in/matej-kapral-808645182/"><FontAwesomeIcon icon={faLinkedin} />LinkedIn</a>.</p>
         </div>
       </div>
     </div>

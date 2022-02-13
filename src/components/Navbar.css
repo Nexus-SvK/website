@@ -1,5 +1,6 @@
 .navigation {
   top:0;
+  left: 0;
   position: fixed;
   width: 100%;
   display:flex;
@@ -12,7 +13,7 @@
 .links {
   position: relative;
   padding: 15px;
-  color: #ff0000;
+  color: rgb(192, 192, 192);
 }
 .links:after {
   content: "";
@@ -29,4 +30,18 @@
 .links:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+@media screen and (max-width: 500px) {
+.navigation{
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.links .hidden{
+  display: none;
+}
+.links{
+  display: block;
+}
 }

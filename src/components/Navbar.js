@@ -1,36 +1,48 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./Navbar.css";
-import {useEffect} from 'react';
+import { Link } from "react-scroll";
+import { dataMenu } from "./Data";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Navbar(props) {
-  const [scrolled,setScrolled]=React.useState(false);
+export default function Navbar() {
+  const nav = useRef();
+  const [width, setWidth] = useState();
+  const [click, setClick] = useState(false);
 
-  const handleScroll=() => {
-    const offset=window.scrollY;
-    if(offset > 200 ){
-      setScrolled(true);
-    }
-    else{
-      setScrolled(false);
-    }
-  }
+  const getSize = () => {
+    setWidth(nav.current.clientWidth);
+  };
+
   useEffect(() => {
-    window.addEventListener('scroll',handleScroll)
-  })
+    getSize();
+  }, []);
 
-  let x=['navigation'];
-  if(scrolled){
-    x.push('scrolled');
-  }
-
-  const Links = props.data.map((data) => (
-    <a className="links" key={data}>{data}</a>
-  ));
+  useEffect(() => {
+    window.addEventListener("resize", getSize);
+  }, []);
   return (
-  // <div className={x.join(" ")}>
-    <div className="navigation">
-      {Links}
+    <div ref={nav} id="nav" className="navigation">
+      <div className={click||width>483 ? "show" : "hidden"}>
+        {dataMenu.map((data) => (
+          <Link
+            to={data.id}
+            className="links"
+            key={data}
+            smooth={true}
+            duration={1000}
+          >
+            {data.label}
+          </Link>
+        ))}
+      </div>
+      <FontAwesomeIcon
+        id="icon"
+        onClick={() => {
+          setClick(!click);
+        }}
+        icon={click ? faXmark : faBars}
+      />
     </div>
-    // </div>
-    );
+  );
 }
